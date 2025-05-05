@@ -1,0 +1,18 @@
+//6. Scenario: You are a cashier at a grocery store and need to calculate the total cost of a customer's purchase, including applicable discounts and taxes. You have the item prices and quantities in separate lists, and the discount and tax rates are given as percentages. Your task is to calculate the total cost for the customer.
+Question: Use arithmetic operations to calculate the total cost of a customer's purchase, including discounts and taxes, given the item prices, quantities, discount rate, and tax rate?
+
+
+item_prices = [10.50, 5.75, 2.99] 
+item_quantities = [3, 2, 5] 
+discount_rate = 10  
+tax_rate = 8 
+subtotal = sum([price * quantity for price, quantity in zip(item_prices, item_quantities)])
+discount_amount = subtotal * (discount_rate / 100)
+discounted_subtotal = subtotal - discount_amount
+tax_amount = discounted_subtotal * (tax_rate / 100)
+total_cost = discounted_subtotal + tax_amount
+print(f"Subtotal: ${subtotal:.2f}")
+print(f"Discount amount: ${discount_amount:.2f}")
+print(f"Discounted subtotal: ${discounted_subtotal:.2f}")
+print(f"Tax amount: ${tax_amount:.2f}")
+print(f"Total cost: ${total_cost:.2f}")
