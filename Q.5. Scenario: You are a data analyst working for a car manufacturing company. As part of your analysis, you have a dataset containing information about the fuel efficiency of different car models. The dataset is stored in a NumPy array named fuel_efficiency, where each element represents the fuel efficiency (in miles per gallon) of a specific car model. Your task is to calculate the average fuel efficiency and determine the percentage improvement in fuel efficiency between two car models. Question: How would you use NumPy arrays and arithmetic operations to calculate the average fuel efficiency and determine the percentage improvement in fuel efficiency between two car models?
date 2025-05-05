@@ -1,0 +1,11 @@
+//5. Scenario: You are a data analyst working for a car manufacturing company. As part of your analysis, you have a dataset containing information about the fuel efficiency of different car models. The dataset is stored in a NumPy array named fuel_efficiency, where each element represents the fuel efficiency (in miles per gallon) of a specific car model. Your task is to calculate the average fuel efficiency and determine the percentage improvement in fuel efficiency between two car models.
+Question: How would you use NumPy arrays and arithmetic operations to calculate the average fuel efficiency and determine the percentage improvement in fuel efficiency between two car models?
+
+
+import numpy as np
+average_fuel_efficiency = np.mean(fuel_efficiency)
+fuel_efficiency_model_1 = fuel_efficiency[0]  # First model (index 0)
+fuel_efficiency_model_2 = fuel_efficiency[1]  # Second model (index 1)
+percentage_improvement = ((fuel_efficiency_model_2 - fuel_efficiency_model_1) / fuel_efficiency_model_1) * 100
+print(f"Average fuel efficiency: {average_fuel_efficiency:.2f} miles per gallon")
+print(f"Percentage improvement in fuel efficiency from Model 1 to Model 2: {percentage_improvement:.2f}%")
